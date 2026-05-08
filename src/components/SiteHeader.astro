@@ -1,0 +1,92 @@
+---
+import "../styles/site-header.css";
+
+const navLinks = [
+  { href: "/cypriot-weddings", label: "Cypriot Weddings" },
+  { href: "/english-weddings", label: "English Weddings" },
+  { href: "/christenings", label: "Christenings" },
+  { href: "/proposals", label: "Proposals" },
+  { href: "/families", label: "Families" },
+  { href: "/models", label: "Models" },
+];
+
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isActive = (href: string) => currentPath === href;
+---
+
+<header class="site-header">
+  <nav class="site-header__nav" aria-label="Primary navigation">
+    <div class="site-header__brand-row">
+      <a class="site-header__brand-link" href="/" aria-label="Studio Photo Creation home">
+        <img
+          class="site-header__logo"
+          src="https://res.cloudinary.com/dmdbza74n/image/upload/v1774085842/studiophotocreation/logo-black-trim_niv0nr.png"
+          alt="Studio Photo Creation by D"
+        />
+      </a>
+      <button
+        class="site-header__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="site-header__bar" aria-hidden="true"></span>
+        <span class="site-header__bar" aria-hidden="true"></span>
+        <span class="site-header__bar" aria-hidden="true"></span>
+        <span class="site-header__screen-reader-text">Menu</span>
+      </button>
+    </div>
+    <ul class="site-header__list" id="primary-navigation">
+      {
+        navLinks.map((link) => (
+          <li class="site-header__item">
+            <a
+              class:list={[
+                "site-header__link",
+                { "site-header__link--active": isActive(link.href) },
+              ]}
+              href={link.href}
+              aria-current={isActive(link.href) ? "page" : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+      <li class="site-header__contact-item">
+        <a
+          class:list={[
+            "site-header__contact-link",
+            { "site-header__contact-link--active": isActive("/contact") },
+          ]}
+          href="/contact"
+          aria-current={isActive("/contact") ? "page" : undefined}
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const header = document.querySelector(".site-header");
+  const toggle = header?.querySelector<HTMLButtonElement>(".site-header__toggle");
+  const navList = header?.querySelector(".site-header__list");
+  const links = header?.querySelectorAll(".site-header__link, .site-header__contact-link");
+
+  const setMenuState = (isOpen: boolean) => {
+    toggle?.setAttribute("aria-expanded", String(isOpen));
+    toggle?.classList.toggle("site-header__toggle--active", isOpen);
+    navList?.classList.toggle("site-header__list--open", isOpen);
+  };
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    setMenuState(!isOpen);
+  });
+
+  links?.forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+</script>

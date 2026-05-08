@@ -18,6 +18,27 @@ Question:
 
 Milestone:
 
+02 - App Shell And BEM CSS
+
+Changed:
+
+Added the shared Astro layout, static site header, footer, global CSS foundation,
+and BEM component styles. The homepage now renders through the layout.
+
+Learned:
+
+Astro layouts replace the React outlet shell by wrapping page content with a
+`<slot />`, while small browser behavior can stay isolated to the component
+that needs it.
+
+Question:
+
+None.
+
+### 2026-05-09
+
+Milestone:
+
 01 - Astro Setup
 
 Changed:

@@ -20,78 +20,87 @@ const heroPoster = cloudinaryImage(heroVideo.poster, 1440);
   <script type="application/ld+json" set:html={organizationSchemaJson} />
 
   <div class="homepage">
-    <section class="homepage__video-section" aria-label="Studio Photo Creation wedding film preview">
-      <div class="homepage__video-wrap">
-        <video class="homepage__video" autoplay muted loop playsinline poster={heroPoster}>
-          <source src={heroVideo.src} type={heroVideo.type} />
-          Sorry, your browser does not support embedded videos.
-        </video>
+    <section class="homepage__hero" aria-label="Studio Photo Creation by D">
+      <video class="homepage__hero-video" autoplay muted loop playsinline poster={heroPoster}>
+        <source src={heroVideo.src} type={heroVideo.type} />
+          Sorry, your browser does not support embedded videos
+      </video>
+      <div class="homepage__hero-overlay"></div>
+      <div class="homepage__hero-content">
+        <p class="homepage__eyebrow">Wedding photography and film in Paphos, Cyprus</p>
+        <h1 class="homepage__hero-title">Studio Photo Creation by D</h1>
+        <p class="homepage__hero-text">
+          Elegant, emotional coverage for weddings, christenings, proposals,
+          families, and portraits
+        </p>
+        <a class="homepage__hero-link" href="/contact/">Book a conversation</a>
       </div>
     </section>
 
     <section class="homepage__transition" aria-label="Photography and video services">
-      <p class="homepage__transition-text homepage__transition-text--left">
-        Providing you the&nbsp;
-        <br />
-        <span class="homepage__transition-emphasis">finest footage</span>
-        &nbsp;of
-      </p>
+      <div class="homepage__transition-copy" data-motion="text-left">
+        <p class="homepage__eyebrow">Photography, video, and story-led coverage</p>
+        <h2 class="homepage__transition-title">
+          A refined record of the moments people remember first
+        </h2>
+        <p class="homepage__transition-body">
+          From ceremony details to late-night celebration, every gallery is built
+          around atmosphere, emotion, and the people in the room
+        </p>
+      </div>
       <img
-        class="homepage__transition-image homepage__transition-image--left"
+        class="homepage__transition-image homepage__transition-image--portrait"
         src={cloudinaryImage(transitionImages.left.src, 520)}
         alt={transitionImages.left.alt}
         loading="lazy"
+        data-motion="image"
+        style="--motion-delay: 110ms"
       />
-      <p class="homepage__transition-text homepage__transition-text--right">
-        your&nbsp;
-        <span class="homepage__transition-emphasis">
-          wedding
-          <br />
-          christening
-          <br />
-          anniversary
-        </span>
-        &nbsp;or
-      </p>
       <img
-        class="homepage__transition-image homepage__transition-image--middle"
+        class="homepage__transition-image homepage__transition-image--landscape"
         src={cloudinaryImage(transitionImages.middle.src, 900)}
         alt={transitionImages.middle.alt}
         loading="lazy"
+        data-motion="image"
+        style="--motion-delay: 230ms"
       />
-      <p class="homepage__transition-text homepage__transition-text--bottom">
-        any other <span class="homepage__transition-emphasis">celebration</span>
-        <br />
-        &nbsp;in photo and video
-      </p>
       <img
-        class="homepage__transition-image homepage__transition-image--right"
+        class="homepage__transition-image homepage__transition-image--detail"
         src={cloudinaryImage(transitionImages.right.src, 520)}
         alt={transitionImages.right.alt}
         loading="lazy"
+        data-motion="image"
+        style="--motion-delay: 340ms"
       />
     </section>
 
-    <section class="homepage__categories" aria-label="Photography categories">
-      {homepageCategories.map((category) => <CategoryCard {...category} />)}
+    <section class="homepage__categories" aria-labelledby="homepage-categories-title">
+      <div class="homepage__section-heading" data-motion="text-left">
+        <h2 id="homepage-categories-title" class="homepage__section-title">Choose the story you are planning</h2>
+      </div>
+      <div class="homepage__category-grid">
+        {homepageCategories.map((category, index) => <CategoryCard {...category} index={index} />)}
+      </div>
     </section>
 
     <section class="homepage__contact" aria-label="Contact Studio Photo Creation">
-      <div class="homepage__contact-image-wrap">
+      <div class="homepage__contact-media">
         <img
           class="homepage__contact-image"
           src={cloudinaryImage(contactCtaImage.src, 900)}
           alt={contactCtaImage.alt}
           loading="eager"
+          data-motion="image"
         />
       </div>
-      <div class="homepage__contact-content">
-        <h1 class="homepage__contact-title">
-          LET&apos;S TALK AND
-          <br />
-          PLAN YOUR WEDDING
-        </h1>
-        <a class="homepage__contact-link" href="/contact/">CONTACT NOW</a>
+      <div class="homepage__contact-content" data-motion="text-right">
+        <p class="homepage__eyebrow">Paphos studio, destination-ready</p>
+        <h2 class="homepage__contact-title">Let&apos;s plan the images before the day arrives</h2>
+        <p class="homepage__contact-text">
+          Share the date, location, and celebration type. Dimitris will reply
+          with availability and next steps
+        </p>
+        <a class="homepage__contact-link" href="/contact/">Contact now</a>
       </div>
     </section>
   </div>

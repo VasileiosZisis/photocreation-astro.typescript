@@ -15,14 +15,13 @@ export const getStaticPaths = async () => {
 };
 
 const { gallery } = Astro.props;
-const { title, description, seo, images, slug } = gallery.data;
+const { title, seo, images, slug } = gallery.data;
 ---
 
 <BaseLayout {...seo}>
   <section class="gallery-page">
-    <header class="gallery-page__header">
+    <header class="gallery-page__header" data-motion="text-left">
       <h1 class="gallery-page__title">{title}</h1>
-      <p class="gallery-page__description">{description}</p>
     </header>
     <GalleryGrid images={images} galleryId={`${slug}-gallery`} />
   </section>

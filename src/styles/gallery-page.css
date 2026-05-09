@@ -1,8 +1,14 @@
 .gallery-page {
-  padding: 3rem 1.25rem 4rem;
+  position: relative;
+  overflow: hidden;
+  padding: 3rem var(--site-gutter) 5rem;
+  background:
+    linear-gradient(130deg, rgba(245, 240, 232, 0.9), rgba(230, 220, 205, 0.78)),
+    repeating-linear-gradient(90deg, rgba(24, 22, 20, 0.035) 0 1px, transparent 1px 10px);
 }
 
 .gallery-page__header {
+  position: relative;
   width: min(100%, 58rem);
   margin: 0 auto 2rem;
   text-align: center;
@@ -10,22 +16,23 @@
 
 .gallery-page__title {
   font-family: var(--font-display);
-  font-size: 3rem;
-  font-weight: 400;
-  line-height: 1;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 0.95;
 }
 
 .gallery-page__description {
-  margin-top: 0.75rem;
-  color: var(--color-grey);
+  width: min(100%, 40rem);
+  margin: 1rem auto 0;
+  color: var(--color-charcoal);
 }
 
 @media only screen and (max-width: 50em) {
   .gallery-page {
-    padding-top: 1.5rem;
+    padding-top: 3rem;
   }
 
   .gallery-page__title {
-    font-size: 2.25rem;
+    font-size: 3rem;
   }
 }

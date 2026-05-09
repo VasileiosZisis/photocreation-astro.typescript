@@ -13,8 +13,8 @@ across all gallery pages.
 5. [Gallery Vertical Slice](milestones/05-gallery-vertical-slice.md)
 6. [Remaining Pages Migration](milestones/06-remaining-pages-migration.md)
 7. [SEO, Accessibility, And Performance](milestones/07-seo-accessibility-performance.md)
-8. [Netlify Deployment](milestones/08-netlify-deployment.md)
-9. [Redesign Pass](milestones/09-redesign-pass.md)
+8. [Redesign Pass](milestones/08-redesign-pass.md)
+9. [Netlify Deployment](milestones/09-netlify-deployment.md)
 
 ## Suggested Working Rule
 

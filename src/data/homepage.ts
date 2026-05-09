@@ -21,15 +21,15 @@ export const heroVideo = {
 export const transitionImages = {
   left: {
     src: "https://res.cloudinary.com/dmdbza74n/image/upload/v1632242600/studiophotocreation/cypriot-weddings/jennifer-xaris/SPC_0655_lgvyls.webp",
-    alt: "Bride and groom during a Cypriot wedding celebration in Paphos.",
+    alt: "Bride and groom during a Cypriot wedding celebration in Paphos",
   },
   middle: {
     src: "https://res.cloudinary.com/dmdbza74n/image/upload/v1632244008/studiophotocreation/cypriot-weddings/maria-lampros/SPC_2355_v7jz5e.webp",
-    alt: "Wedding couple portrait photographed by Studio Photo Creation.",
+    alt: "Wedding couple portrait photographed by Studio Photo Creation",
   },
   right: {
     src: "https://res.cloudinary.com/dmdbza74n/image/upload/v1632242635/studiophotocreation/cypriot-weddings/kata-andreas/SPC_1741_bmmhfi.webp",
-    alt: "Outdoor wedding portrait from Studio Photo Creation.",
+    alt: "Outdoor wedding portrait from Studio Photo Creation",
   },
 };
 
@@ -39,7 +39,7 @@ export const homepageCategories: HomepageCategory[] = [
     href: "/cypriot-weddings/",
     image:
       "https://res.cloudinary.com/dmdbza74n/image/upload/v1632242635/studiophotocreation/cypriot-weddings/kata-andreas/SPC_1720_opgooy.webp",
-    alt: "Cypriot wedding couple portrait.",
+    alt: "Cypriot wedding couple portrait",
     widthOffset: 65,
     height: "20%",
     top: "10%",
@@ -50,7 +50,7 @@ export const homepageCategories: HomepageCategory[] = [
     href: "/english-weddings/",
     image:
       "https://res.cloudinary.com/dmdbza74n/image/upload/v1639567892/studiophotocreation/english-weddings/christina-kyle.v2/SPC_0645_cun0gt.webp",
-    alt: "English wedding couple portrait.",
+    alt: "English wedding couple portrait",
     widthOffset: 70,
     height: "30%",
     top: "7%",
@@ -61,7 +61,7 @@ export const homepageCategories: HomepageCategory[] = [
     href: "/christenings/",
     image:
       "https://res.cloudinary.com/dmdbza74n/image/upload/v1632244388/studiophotocreation/christenings/agapi/SPC_0048_gmdhd9.webp",
-    alt: "Christening photography detail.",
+    alt: "Christening photography detail",
     widthOffset: 70,
     height: "20%",
     top: "35%",
@@ -72,7 +72,7 @@ export const homepageCategories: HomepageCategory[] = [
     href: "/proposals/",
     image:
       "https://res.cloudinary.com/dmdbza74n/image/upload/v1636567847/studiophotocreation/proposals/Antreas-Athina/SPC_0079_smxc3k.webp",
-    alt: "Proposal photography moment.",
+    alt: "Proposal photography moment",
     widthOffset: 65,
     height: "20%",
     top: "42%",
@@ -83,7 +83,7 @@ export const homepageCategories: HomepageCategory[] = [
     href: "/families/",
     image:
       "https://res.cloudinary.com/dmdbza74n/image/upload/v1636569417/studiophotocreation/families/Rianna-Ralf/SPC_0085_qfbwmg.webp",
-    alt: "Family portrait photographed by Studio Photo Creation.",
+    alt: "Family portrait photographed by Studio Photo Creation",
     widthOffset: 70,
     height: "30%",
     top: "62%",
@@ -94,7 +94,7 @@ export const homepageCategories: HomepageCategory[] = [
     href: "/models/",
     image:
       "https://res.cloudinary.com/dmdbza74n/image/upload/v1636568569/studiophotocreation/models/Sveta/SPC_0923_c3iupa.webp",
-    alt: "Model portrait photographed by Studio Photo Creation.",
+    alt: "Model portrait photographed by Studio Photo Creation",
     widthOffset: 70,
     height: "20%",
     top: "68%",
@@ -104,7 +104,7 @@ export const homepageCategories: HomepageCategory[] = [
 
 export const contactCtaImage = {
   src: "https://res.cloudinary.com/dmdbza74n/image/upload/v1636567848/studiophotocreation/proposals/Antreas-Athina/SPC_0084_df2zky.webp",
-  alt: "Couple portrait used for the Studio Photo Creation contact call to action.",
+  alt: "Couple portrait used for the Studio Photo Creation contact call to action",
 };
 
 export const organizationSchema = {

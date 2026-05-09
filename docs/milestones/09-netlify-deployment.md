@@ -1,8 +1,8 @@
-# Milestone 08: Netlify Deployment
+# Milestone 09: Netlify Deployment
 
 ## Goal
 
-Deploy the Astro site to Netlify as a static site.
+Deploy the redesigned Astro site to Netlify as a static site.
 
 ## Lesson
 
@@ -87,4 +87,4 @@ Check:
 - Netlify deploy preview works
 - Production build matches local expectations
 - Launch checklist is complete
-- No redesign work is mixed into deployment
+- Redesign work is already complete before deployment starts

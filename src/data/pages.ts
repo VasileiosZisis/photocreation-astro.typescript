@@ -20,21 +20,21 @@ export const routeChecklist: SiteRoute[] = [
 export const pageMetadata = {
   "/": {
     title: "Studio Photo Creation by D",
-    description: "Photography and video studio in Paphos, Cyprus.",
+    description: "Photography and video studio in Paphos, Cyprus",
     canonicalPath: "/",
     image: defaultOpenGraphImage,
   },
   "/contact/": {
     title: "Contact Me - Studio Photo Creation by D",
     description:
-      "How to contact Dimitris Domouchtsis. Facebook page, instagram and work phone number.",
+      "How to contact Dimitris Domouchtsis. Facebook page, instagram and work phone number",
     canonicalPath: "/contact/",
     image:
       "https://res.cloudinary.com/dmdbza74n/image/upload/v1632243600/studiophotocreation/wedding-stories/jemma-carl/CARL_JEMMA_13_j0orvq.webp",
   },
   "/privacy-policy/": {
     title: "Privacy Policy - Studio Photo Creation by D",
-    description: "Privacy policy for Studio Photo Creation by D.",
+    description: "Privacy policy for Studio Photo Creation by D",
     canonicalPath: "/privacy-policy/",
     image: defaultOpenGraphImage,
   },

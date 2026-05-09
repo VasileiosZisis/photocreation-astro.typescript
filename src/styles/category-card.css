@@ -1,29 +1,32 @@
 .category-card {
-  display: block;
+  position: relative;
+  min-height: 24rem;
+  overflow: hidden;
+  border-radius: var(--radius-small);
+  background-color: var(--color-ink);
+  box-shadow: var(--shadow-soft);
 }
 
 .category-card__title {
   position: absolute;
-  top: var(--category-card-top);
-  left: var(--category-card-left);
+  right: 1.2rem;
+  bottom: 1.1rem;
+  left: 1.2rem;
   z-index: 11;
-  margin-top: -2.4%;
-  margin-left: -2%;
-  color: var(--color-white);
+  color: var(--color-paper);
   font-family: var(--font-display);
-  font-size: 2.5rem;
-  font-weight: 100;
-  text-shadow: 1px 1px 2px var(--color-black);
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 0.95;
+  text-shadow: 0 2px 18px rgba(24, 22, 20, 0.7);
+  transition: transform var(--transition-slow);
 }
 
 .category-card__link {
   position: absolute;
-  top: var(--category-card-top);
-  left: var(--category-card-left);
-  z-index: 9;
-  width: var(--category-card-width);
-  height: var(--category-card-height);
-  overflow: hidden;
+  inset: 0;
+  z-index: 10;
+  display: block;
 }
 
 .category-card__media {
@@ -32,73 +35,109 @@
   width: 100%;
   height: 100%;
   background-color: var(--color-black);
-  transition: all var(--transition-slow);
+  transition:
+    filter var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+.category-card__media::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(24, 22, 20, 0.08) 0%, rgba(24, 22, 20, 0.76) 100%),
+    linear-gradient(35deg, rgba(185, 155, 98, 0.2), transparent 42%);
+  content: "";
 }
 
 .category-card__cta {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  right: 1.2rem;
+  bottom: 4.65rem;
+  left: 1.2rem;
   z-index: 10;
-  transform: translate(-50%, -50%);
-  border: 2px solid var(--color-white);
-  padding: 5px 35px;
-  color: var(--color-white);
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 0;
+  padding: 0;
+  color: var(--color-gold);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
   opacity: 0;
-  transition: opacity var(--transition-slow);
+  text-transform: uppercase;
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-normal);
+  transform: translateY(0.6rem);
+}
+
+.category-card__cta::before,
+.category-card__cta::after {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(185, 155, 98, 0.68);
+  content: "";
 }
 
 .category-card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity var(--transition-slow);
+  transition:
+    filter var(--transition-slow),
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
 }
 
 .category-card__link:hover .category-card__media,
 .category-card__link:focus .category-card__media {
-  outline: 2px solid var(--color-white);
-  outline-offset: -25px;
+  transform: scale(1.025);
+}
+
+.category-card:hover .category-card__title,
+.category-card:focus-within .category-card__title {
+  transform: translateY(-0.45rem);
 }
 
 .category-card__link:hover .category-card__image,
 .category-card__link:focus .category-card__image {
-  opacity: 0.2;
+  filter: saturate(0.86) contrast(1.06);
+  opacity: 0.62;
 }
 
 .category-card__link:hover .category-card__cta,
 .category-card__link:focus .category-card__cta {
   opacity: 1;
+  transform: translateY(0.2rem);
+}
+
+.category-card:nth-child(2),
+.category-card:nth-child(5) {
+  min-height: 30rem;
+}
+
+.category-card:nth-child(3),
+.category-card:nth-child(6) {
+  margin-top: 3rem;
 }
 
 @media only screen and (max-width: 50em) {
   .category-card {
-    width: calc(100vw - 50px);
-  }
-
-  .category-card__title,
-  .category-card__link {
-    position: static;
+    min-height: 20rem;
   }
 
   .category-card__title {
-    margin: 0;
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
-  .category-card__link {
-    display: block;
-    width: 100%;
-    height: 300px;
+  .category-card:nth-child(2),
+  .category-card:nth-child(5) {
+    min-height: 20rem;
   }
 
-  .category-card__cta {
-    font-size: 1rem;
-    opacity: 1;
-  }
-
-  .category-card__image {
-    opacity: 0.4;
+  .category-card:nth-child(3),
+  .category-card:nth-child(6) {
+    margin-top: 0;
   }
 }

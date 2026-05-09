@@ -1,5 +1,7 @@
 ---
 import "../styles/site-footer.css";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
@@ -48,7 +50,7 @@ import "../styles/site-footer.css";
     </a>
   </div>
   <div class="site-footer__text">
-    <p>Copyright &copy; 2024 Photography Dimitris Domouchtsis/Studio Photo Creation</p>
+    <p>Copyright &copy; {currentYear} Photography Dimitris Domouchtsis/Studio Photo Creation</p>
     <p>
       <a class="site-footer__link" href="/privacy-policy/">Privacy Policy</a>
     </p>

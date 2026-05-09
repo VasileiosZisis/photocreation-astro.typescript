@@ -7,51 +7,78 @@ import "../styles/contact-page.css";
 
 <BaseLayout {...pageMetadata["/contact/"]}>
   <div class="contact-page">
+    <section class="contact-page__hero" aria-labelledby="contact-title" data-motion="text-left">
+      <p class="contact-page__eyebrow">Contact Studio Photo Creation</p>
+      <h1 id="contact-title" class="contact-page__title">Start with the date, place, and story</h1>
+      <p class="contact-page__summary">
+        Reach Dimitris directly for wedding, christening, proposal, family, and
+        portrait photography in Paphos and across Cyprus
+      </p>
+    </section>
+
     <section class="contact-page__intro" aria-label="Contact details">
       <div class="contact-page__image-wrap">
         <img
           class="contact-page__image"
           src={cloudinaryImage("https://res.cloudinary.com/dmdbza74n/image/upload/v1632243600/studiophotocreation/wedding-stories/jemma-carl/CARL_JEMMA_13_j0orvq.webp", 1000)}
           alt="Wedding couple photographed by Studio Photo Creation."
+          data-motion="image"
         />
       </div>
-      <ul class="contact-page__links">
-        <li class="contact-page__link-item">
-          <span class="contact-page__icon" aria-hidden="true">f</span>
-          <a href="https://www.facebook.com/DomouchtsisDimitris" target="_blank" rel="noreferrer">
-            DomouchtsisDimitris
-          </a>
-        </li>
-        <li class="contact-page__link-item">
-          <span class="contact-page__icon" aria-hidden="true">ig</span>
-          <a href="https://www.instagram.com/studiophotocreation/" target="_blank" rel="noreferrer">
-            @studiophotocreation
-          </a>
-        </li>
-        <li class="contact-page__link-item">
-          <span class="contact-page__icon" aria-hidden="true">@</span>
-          <a href="mailto:photocreation@cytanet.com.cy">photocreation@cytanet.com.cy</a>
-        </li>
-        <li class="contact-page__link-item">
-          <span class="contact-page__icon" aria-hidden="true">tel</span>
-          <a href="tel:+35799541649" title="+357 99 54 1649">+357 99 54 1649</a>
-        </li>
-      </ul>
+      <div class="contact-page__details" data-motion="text-right" style="--motion-delay: 140ms">
+        <h2 class="contact-page__details-title">Direct details</h2>
+        <ul class="contact-page__links">
+          <li class="contact-page__link-item">
+            <span class="contact-page__icon" aria-hidden="true">f</span>
+            <div>
+              <span class="contact-page__label">Facebook</span>
+              <a href="https://www.facebook.com/DomouchtsisDimitris" target="_blank" rel="noreferrer">
+                DomouchtsisDimitris
+              </a>
+            </div>
+          </li>
+          <li class="contact-page__link-item">
+            <span class="contact-page__icon" aria-hidden="true">ig</span>
+            <div>
+              <span class="contact-page__label">Instagram</span>
+              <a href="https://www.instagram.com/studiophotocreation/" target="_blank" rel="noreferrer">
+                @studiophotocreation
+              </a>
+            </div>
+          </li>
+          <li class="contact-page__link-item">
+            <span class="contact-page__icon" aria-hidden="true">@</span>
+            <div>
+              <span class="contact-page__label">Email</span>
+              <a href="mailto:photocreation@cytanet.com.cy">photocreation@cytanet.com.cy</a>
+            </div>
+          </li>
+          <li class="contact-page__link-item">
+            <span class="contact-page__icon" aria-hidden="true">tel</span>
+            <div>
+              <span class="contact-page__label">Phone</span>
+              <a href="tel:+35799541649" title="+357 99 54 1649">+357 99 54 1649</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="contact-page__location" aria-label="Studio location">
-      <div class="contact-page__address">
+      <div class="contact-page__address" data-motion="text-left">
+        <p class="contact-page__eyebrow">Studio address</p>
         <div class="contact-page__address-line">
-          <span class="contact-page__pin" aria-hidden="true">•</span>
           <p>Apostolou Pavlou 14A Paphos CY 8046</p>
         </div>
         <img
           class="contact-page__studio-image"
           src={cloudinaryImage("https://res.cloudinary.com/dmdbza74n/image/upload/v1632245788/studiophotocreation/Location_1_ordr1u.webp", 900)}
           alt="Front view of the Studio Photo Creation photography studio in Paphos."
+          data-motion="image"
+          style="--motion-delay: 120ms"
         />
       </div>
-      <div class="contact-page__map">
+      <div class="contact-page__map" data-motion="text-right" style="--motion-delay: 180ms">
         <iframe
           title="Studio Photo Creation location on Google Maps"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.3281231813625!2d32.41835435340739!3d34.77290767312378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9e5ee3aa8a0c429c!2sWedding%20%26%20Portrait%20Photographer%20Dimitris%20Domouchtsis!5e0!3m2!1sen!2s!4v1597683639687!5m2!1sen"

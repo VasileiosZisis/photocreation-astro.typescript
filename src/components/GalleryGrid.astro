@@ -18,7 +18,7 @@ const DEFAULT_HEIGHT = 1067;
 
 <section class="gallery-grid" id={galleryId} data-photoswipe-gallery>
   {
-    images.map((image) => {
+    images.map((image, index) => {
       const width = image.width ?? DEFAULT_WIDTH;
       const height = image.height ?? DEFAULT_HEIGHT;
       const thumbnail = cloudinaryImage(image.src, 520);
@@ -27,9 +27,11 @@ const DEFAULT_HEIGHT = 1067;
       return (
         <a
           class="gallery-grid__item"
+          style={`--motion-delay: ${Math.min(index % 9, 8) * 45}ms;`}
           href={image.src}
           data-pswp-width={width}
           data-pswp-height={height}
+          data-motion="gallery"
           target="_blank"
           rel="noreferrer"
           aria-label={image.title ? `Open ${image.title}` : "Open gallery image"}

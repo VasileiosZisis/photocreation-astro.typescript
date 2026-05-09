@@ -1,146 +1,217 @@
 .contact-page {
-  margin-top: 5rem;
+  position: relative;
   overflow: hidden;
+  background:
+    linear-gradient(120deg, rgba(245, 240, 232, 0.92), rgba(230, 220, 205, 0.82)),
+    repeating-linear-gradient(90deg, rgba(24, 22, 20, 0.035) 0 1px, transparent 1px 10px);
+}
+
+.contact-page__hero {
+  width: min(100% - 3rem, 62rem);
+  margin: 0 auto;
+  padding: 5rem 0 4rem;
+  text-align: center;
+}
+
+.contact-page__eyebrow {
+  color: var(--color-gold);
+  font-size: 0.77rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-page__title {
+  margin-top: 0.7rem;
+  font-family: var(--font-display);
+  font-size: 4.8rem;
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.contact-page__summary {
+  width: min(100%, 38rem);
+  margin: 1.1rem auto 0;
+  color: var(--color-charcoal);
 }
 
 .contact-page__intro {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.78fr);
+  width: min(100% - 3rem, 76rem);
+  margin: 0 auto 5rem;
+  overflow: hidden;
+  border-radius: var(--radius-small);
+  background-color: var(--color-ink);
+  box-shadow: var(--shadow-deep);
 }
 
 .contact-page__image-wrap {
-  width: 100%;
-  max-height: 800px;
+  min-height: 40rem;
   overflow: hidden;
-  background-color: var(--color-grey);
 }
 
 .contact-page__image {
   width: 100%;
   height: 100%;
+  border-radius: 0;
   object-fit: cover;
+}
+
+.contact-page__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  background:
+    linear-gradient(145deg, rgba(38, 35, 31, 0.96), rgba(24, 22, 20, 0.98)),
+    repeating-linear-gradient(0deg, rgba(245, 240, 232, 0.05) 0 1px, transparent 1px 9px);
+  color: var(--color-paper);
+}
+
+.contact-page__details-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
 }
 
 .contact-page__links {
   display: flex;
-  width: 100%;
   flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  background-color: var(--color-grey);
+  gap: 1.35rem;
+  margin-top: 2.2rem;
 }
 
 .contact-page__link-item {
-  position: relative;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  padding-left: 10%;
-}
-
-.contact-page__link-item:not(:last-child)::after {
-  position: absolute;
-  width: 40%;
-  height: 1px;
-  margin-top: 4rem;
-  margin-left: 5%;
-  background-color: var(--color-white);
-  content: "";
+  gap: 1rem;
+  border-top: 1px solid rgba(245, 240, 232, 0.14);
+  padding-top: 1.1rem;
 }
 
 .contact-page__link-item a {
-  color: var(--color-white);
-  font-size: 1.3rem;
+  color: var(--color-paper);
+  font-size: 1.02rem;
+  overflow-wrap: anywhere;
   transition: color var(--transition-normal);
 }
 
 .contact-page__link-item a:hover,
 .contact-page__link-item a:focus {
-  color: var(--color-black);
+  color: var(--color-gold);
+}
+
+.contact-page__label {
+  display: block;
+  color: rgba(245, 240, 232, 0.58);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .contact-page__icon {
   display: inline-grid;
-  min-width: 2rem;
-  height: 2rem;
+  min-width: 2.4rem;
+  height: 2.4rem;
   place-content: center;
-  color: var(--color-black);
-  font-weight: 700;
+  border: 1px solid rgba(185, 155, 98, 0.42);
+  border-radius: 999px;
+  color: var(--color-gold);
+  font-size: 0.74rem;
+  font-weight: 800;
 }
 
 .contact-page__location {
   display: grid;
-  min-height: 75vh;
-  grid-template-columns: 1fr 1fr;
-  padding-block: 3rem;
-  background-color: var(--color-black);
+  min-height: 38rem;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 1rem;
+  width: min(100% - 3rem, 76rem);
+  margin: 0 auto 5rem;
 }
 
 .contact-page__address {
-  width: 90%;
-  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-small);
+  padding: 2rem;
+  background:
+    linear-gradient(145deg, rgba(89, 96, 75, 0.25), rgba(245, 240, 232, 0.68)),
+    repeating-linear-gradient(135deg, rgba(24, 22, 20, 0.05) 0 1px, transparent 1px 9px);
 }
 
 .contact-page__address-line {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding-bottom: 5rem;
-  color: var(--color-white);
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-.contact-page__pin {
-  font-size: 2rem;
-  line-height: 1;
+  margin-top: 0.8rem;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.05;
 }
 
 .contact-page__studio-image {
   width: 100%;
-  border-radius: 1%;
+  height: 24rem;
+  margin-top: 2rem;
+  object-fit: cover;
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-page__map {
+  overflow: hidden;
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-soft);
 }
 
 .contact-page__map iframe {
   width: 100%;
   height: 100%;
-  min-height: 28rem;
+  min-height: 38rem;
   border: 0;
-  border-radius: 1%;
-  padding: 2rem;
 }
 
-@media only screen and (max-width: 50em) {
-  .contact-page {
-    margin-top: 1rem;
+@media only screen and (max-width: 64em) {
+  .contact-page__title {
+    font-size: 3.6rem;
   }
 
-  .contact-page__intro {
-    flex-direction: column;
-  }
-
-  .contact-page__links {
-    padding-block: 3rem;
-  }
-
-  .contact-page__link-item {
-    justify-content: center;
-    padding-left: 1%;
-  }
-
-  .contact-page__link-item a {
-    font-size: 1rem;
-  }
-
-  .contact-page__link-item:not(:last-child)::after {
-    width: 40%;
-    margin-left: 30%;
-  }
-
+  .contact-page__intro,
   .contact-page__location {
     grid-template-columns: 1fr;
   }
 
+  .contact-page__image-wrap {
+    min-height: 30rem;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .contact-page__hero,
+  .contact-page__intro,
+  .contact-page__location {
+    width: min(100% - 2rem, 76rem);
+  }
+
+  .contact-page__hero {
+    padding-block: 3.5rem 2.5rem;
+  }
+
+  .contact-page__title {
+    font-size: 2.85rem;
+  }
+
+  .contact-page__details {
+    padding: 2rem 1.25rem;
+  }
+
+  .contact-page__details-title {
+    font-size: 2.45rem;
+  }
+
   .contact-page__address-line {
-    font-size: 1rem;
+    font-size: 1.85rem;
   }
 }

@@ -132,7 +132,7 @@
 
 @media only screen and (max-width: 50em) {
   .site-header__brand-link {
-    width: 100%;
+    width: min(550px, calc(100% - 1rem));
   }
 
   .site-header__toggle {

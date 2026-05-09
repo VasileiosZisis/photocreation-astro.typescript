@@ -18,6 +18,27 @@ Question:
 
 Milestone:
 
+04 - Homepage Vertical Slice
+
+Changed:
+
+Rebuilt the homepage with Astro markup, a data-driven category card component,
+Cloudinary media, BEM CSS, static metadata, and preserved Organization JSON-LD.
+
+Learned:
+
+Astro can render the full homepage path without React: data modules feed
+components, components render static HTML, and page-specific CSS can stay
+isolated to the route and repeated component.
+
+Question:
+
+None.
+
+### 2026-05-09
+
+Milestone:
+
 03 - Content Model And Routing
 
 Changed:

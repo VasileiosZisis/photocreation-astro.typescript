@@ -1,13 +1,96 @@
 ---
+import CategoryCard from "../components/CategoryCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  contactCtaImage,
+  heroVideo,
+  homepageCategories,
+  organizationSchema,
+  transitionImages,
+} from "../data/homepage";
 import { pageMetadata } from "../data/pages";
+import "../styles/homepage.css";
+
+const organizationSchemaJson = JSON.stringify(organizationSchema);
 ---
 
 <BaseLayout {...pageMetadata["/"]}>
-  <section class="page-placeholder">
-    <h1 class="page-placeholder__title">Studio Photo Creation by D</h1>
-    <p class="page-placeholder__text">
-      Astro app shell ready. Homepage content will move across in the vertical slice milestone.
-    </p>
-  </section>
+  <script type="application/ld+json" set:html={organizationSchemaJson} />
+
+  <div class="homepage">
+    <section class="homepage__video-section" aria-label="Studio Photo Creation wedding film preview">
+      <div class="homepage__video-wrap">
+        <video class="homepage__video" autoplay muted loop playsinline>
+          <source src={heroVideo.src} type={heroVideo.type} />
+          Sorry, your browser does not support embedded videos.
+        </video>
+      </div>
+    </section>
+
+    <section class="homepage__transition" aria-label="Photography and video services">
+      <p class="homepage__transition-text homepage__transition-text--left">
+        Providing you the&nbsp;
+        <br />
+        <span class="homepage__transition-emphasis">finest footage</span>
+        &nbsp;of
+      </p>
+      <img
+        class="homepage__transition-image homepage__transition-image--left"
+        src={transitionImages.left.src}
+        alt={transitionImages.left.alt}
+        loading="lazy"
+      />
+      <p class="homepage__transition-text homepage__transition-text--right">
+        your&nbsp;
+        <span class="homepage__transition-emphasis">
+          wedding
+          <br />
+          christening
+          <br />
+          anniversary
+        </span>
+        &nbsp;or
+      </p>
+      <img
+        class="homepage__transition-image homepage__transition-image--middle"
+        src={transitionImages.middle.src}
+        alt={transitionImages.middle.alt}
+        loading="lazy"
+      />
+      <p class="homepage__transition-text homepage__transition-text--bottom">
+        any other <span class="homepage__transition-emphasis">celebration</span>
+        <br />
+        &nbsp;in photo and video
+      </p>
+      <img
+        class="homepage__transition-image homepage__transition-image--right"
+        src={transitionImages.right.src}
+        alt={transitionImages.right.alt}
+        loading="lazy"
+      />
+    </section>
+
+    <section class="homepage__categories" aria-label="Photography categories">
+      {homepageCategories.map((category) => <CategoryCard {...category} />)}
+    </section>
+
+    <section class="homepage__contact" aria-label="Contact Studio Photo Creation">
+      <div class="homepage__contact-image-wrap">
+        <img
+          class="homepage__contact-image"
+          src={contactCtaImage.src}
+          alt={contactCtaImage.alt}
+          loading="eager"
+        />
+      </div>
+      <div class="homepage__contact-content">
+        <h1 class="homepage__contact-title">
+          LET&apos;S TALK AND
+          <br />
+          PLAN YOUR WEDDING
+        </h1>
+        <a class="homepage__contact-link" href="/contact/">CONTACT NOW</a>
+      </div>
+    </section>
+  </div>
 </BaseLayout>

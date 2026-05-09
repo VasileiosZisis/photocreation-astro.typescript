@@ -1,0 +1,234 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage__video-section {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.homepage__video-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.homepage__video {
+  width: calc(100vw - 400px);
+}
+
+.homepage__transition {
+  position: relative;
+  height: 150vh;
+  margin-top: 5rem;
+  overflow: hidden;
+  background-color: var(--color-black);
+}
+
+.homepage__transition-text {
+  position: absolute;
+  z-index: 11;
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.homepage__transition-text--left {
+  top: 22%;
+  left: 17%;
+}
+
+.homepage__transition-text--right {
+  top: 48%;
+  left: 65%;
+}
+
+.homepage__transition-text--bottom {
+  top: 75%;
+  left: 35%;
+}
+
+.homepage__transition-emphasis {
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.homepage__transition-image {
+  position: absolute;
+  object-fit: cover;
+}
+
+.homepage__transition-image--left {
+  top: 50%;
+  left: 17%;
+  width: calc(100vw - 85%);
+  height: 25%;
+}
+
+.homepage__transition-image--middle {
+  top: 20%;
+  left: 35%;
+  width: calc(100vw - 68%);
+  height: 50%;
+  opacity: 0.7;
+}
+
+.homepage__transition-image--right {
+  top: 15%;
+  left: 70%;
+  width: calc(100vw - 85%);
+  height: 25%;
+}
+
+.homepage__categories {
+  position: relative;
+  height: 200vh;
+  padding: 5rem;
+  background-color: var(--color-black);
+  background-image: url("https://res.cloudinary.com/dmdbza74n/image/upload/v1699800918/studiophotocreation/SPC_0895_background_rtk3p9.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homepage__contact {
+  display: flex;
+  min-height: 75vh;
+}
+
+.homepage__contact-image-wrap {
+  display: grid;
+  width: 50%;
+  place-content: center;
+  background-color: var(--color-grey);
+}
+
+.homepage__contact-image {
+  width: 85%;
+  height: 100%;
+  margin-inline: auto;
+  object-fit: cover;
+}
+
+.homepage__contact-content {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.homepage__contact-title {
+  color: var(--color-black);
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.homepage__contact-link {
+  width: fit-content;
+  margin-top: 2rem;
+  border: 2px solid var(--color-black);
+  padding: 8px 16px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.homepage__contact-link:hover,
+.homepage__contact-link:focus {
+  border-color: var(--color-white);
+  background-color: var(--color-grey);
+  color: var(--color-white);
+}
+
+@media only screen and (max-width: 50em) {
+  .homepage__video {
+    width: 100vw;
+  }
+
+  .homepage__transition {
+    height: 100vh;
+  }
+
+  .homepage__transition-text {
+    font-size: 2rem;
+  }
+
+  .homepage__transition-text--left {
+    top: 12%;
+    left: 5%;
+  }
+
+  .homepage__transition-text--right {
+    top: 35%;
+    right: 5%;
+    left: auto;
+  }
+
+  .homepage__transition-text--bottom {
+    top: 70%;
+    left: 28%;
+  }
+
+  .homepage__transition-image--left {
+    top: 50%;
+    left: 3%;
+    width: calc(100vw - 74%);
+  }
+
+  .homepage__transition-image--middle {
+    top: 20%;
+    left: 30%;
+    width: calc(100vw - 60%);
+    object-fit: fill;
+  }
+
+  .homepage__transition-image--right {
+    top: 10%;
+    left: 72%;
+    width: calc(100vw - 74%);
+  }
+
+  .homepage__categories {
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    background-attachment: scroll;
+    background-image: none;
+  }
+
+  .homepage__contact {
+    flex-direction: column;
+    padding-block: 3rem;
+  }
+
+  .homepage__contact-image-wrap {
+    width: 100%;
+    height: 50%;
+    padding-top: 1.5rem;
+  }
+
+  .homepage__contact-content {
+    width: 100%;
+  }
+
+  .homepage__contact-title {
+    margin-top: 4rem;
+    font-size: 2rem;
+  }
+
+  .homepage__contact-link {
+    margin-top: 3rem;
+  }
+}

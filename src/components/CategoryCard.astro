@@ -1,0 +1,20 @@
+---
+import "../styles/category-card.css";
+
+import type { HomepageCategory } from "../data/homepage";
+
+type Props = HomepageCategory;
+
+const { title, href, image, alt, widthOffset, height, top, left } = Astro.props;
+const style = `--category-card-top: ${top}; --category-card-left: ${left}; --category-card-width: calc(100vw - ${widthOffset}%); --category-card-height: ${height};`;
+---
+
+<article class="category-card" style={style}>
+  <h3 class="category-card__title">{title}</h3>
+  <a class="category-card__link" href={href} aria-label={`View ${title.toLowerCase()}`}>
+    <span class="category-card__media">
+      <span class="category-card__cta">VIEW ALL</span>
+      <img class="category-card__image" src={image} alt={alt} loading="lazy" />
+    </span>
+  </a>
+</article>

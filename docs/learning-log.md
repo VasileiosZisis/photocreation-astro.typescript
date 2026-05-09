@@ -18,6 +18,28 @@ Question:
 
 Milestone:
 
+05 - Gallery Vertical Slice
+
+Changed:
+
+Moved the full Cypriot weddings image list into a validated content entry,
+created a dynamic gallery route, added a static masonry-style gallery grid, and
+connected PhotoSwipe as progressive enhancement.
+
+Learned:
+
+The gallery page can render as static HTML from content collections, while
+PhotoSwipe only adds focused browser behavior to image links that already work
+without JavaScript.
+
+Question:
+
+None.
+
+### 2026-05-09
+
+Milestone:
+
 04 - Homepage Vertical Slice
 
 Changed:

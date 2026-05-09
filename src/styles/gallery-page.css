@@ -1,0 +1,31 @@
+.gallery-page {
+  padding: 3rem 1.25rem 4rem;
+}
+
+.gallery-page__header {
+  width: min(100%, 58rem);
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.gallery-page__title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.gallery-page__description {
+  margin-top: 0.75rem;
+  color: var(--color-grey);
+}
+
+@media only screen and (max-width: 50em) {
+  .gallery-page {
+    padding-top: 1.5rem;
+  }
+
+  .gallery-page__title {
+    font-size: 2.25rem;
+  }
+}

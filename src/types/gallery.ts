@@ -10,6 +10,7 @@ export type GalleryImage = {
 
 export type GalleryEntry = {
   title: string;
+  description: string;
   slug: string;
   route: SiteRoute;
   seo: SeoMeta;

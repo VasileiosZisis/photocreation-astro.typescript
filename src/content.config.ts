@@ -29,6 +29,7 @@ const galleries = defineCollection({
   }),
   schema: z.object({
     title: z.string().min(1),
+    description: z.string().min(1),
     slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
     route: routePathSchema,
     seo: seoSchema,

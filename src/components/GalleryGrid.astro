@@ -1,0 +1,50 @@
+---
+import "../styles/gallery-grid.css";
+
+import type { GalleryImage } from "../types/gallery";
+
+type Props = {
+  images: GalleryImage[];
+  galleryId: string;
+};
+
+const { images, galleryId } = Astro.props;
+
+const DEFAULT_WIDTH = 1600;
+const DEFAULT_HEIGHT = 1067;
+
+const cloudinaryImage = (src: string, width: number) =>
+  src.replace("/upload/", `/upload/c_limit,w_${width},f_auto,q_auto/`);
+---
+
+<section class="gallery-grid" id={galleryId} data-photoswipe-gallery>
+  {
+    images.map((image) => {
+      const width = image.width ?? DEFAULT_WIDTH;
+      const height = image.height ?? DEFAULT_HEIGHT;
+      const thumbnail = cloudinaryImage(image.src, 520);
+      const thumbnail2x = cloudinaryImage(image.src, 1040);
+
+      return (
+        <a
+          class="gallery-grid__item"
+          href={image.src}
+          data-pswp-width={width}
+          data-pswp-height={height}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={image.title ? `Open ${image.title}` : "Open gallery image"}
+        >
+          <img
+            class="gallery-grid__image"
+            src={thumbnail}
+            srcset={`${thumbnail} 1x, ${thumbnail2x} 2x`}
+            alt={image.alt}
+            loading="lazy"
+          />
+          {image.title && <span class="gallery-grid__caption">{image.title}</span>}
+        </a>
+      );
+    })
+  }
+</section>

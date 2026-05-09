@@ -101,3 +101,46 @@ Astro validates at least one gallery content file.
 - Metadata shape is agreed
 - Gallery item shape is agreed
 - One sample gallery content file validates
+
+## Route Checklist
+
+- [x] `/`
+- [x] `/contact/`
+- [x] `/privacy-policy/`
+- [x] `/cypriot-weddings/`
+- [x] `/english-weddings/`
+- [x] `/christenings/`
+- [x] `/proposals/`
+- [x] `/families/`
+- [x] `/models/`
+
+## Agreed Shapes
+
+Page metadata:
+
+```ts
+type SeoMeta = {
+  title: string;
+  description: string;
+  canonicalPath: SiteRoute;
+  image?: string;
+};
+```
+
+Gallery image:
+
+```ts
+type GalleryImage = {
+  src: string;
+  alt: string;
+  title?: string;
+  width?: number;
+  height?: number;
+};
+```
+
+Content location:
+
+- Gallery entries live in `src/content/galleries/`.
+- The validation schema lives in `src/content.config.ts`.
+- Shared page metadata lives in `src/data/pages.ts`.

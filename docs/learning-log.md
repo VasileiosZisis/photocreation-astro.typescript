@@ -18,6 +18,26 @@ Question:
 
 Milestone:
 
+03 - Content Model And Routing
+
+Changed:
+
+Added the final route checklist, typed page metadata, gallery data types, an
+Astro content collection schema, and a sample Cypriot weddings gallery entry.
+
+Learned:
+
+Astro content collections validate manually edited gallery data at build time,
+so route templates can stay separate from large image lists.
+
+Question:
+
+None.
+
+### 2026-05-09
+
+Milestone:
+
 02 - App Shell And BEM CSS
 
 Changed:

@@ -1,11 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { pageMetadata } from "../data/pages";
 ---
 
-<BaseLayout
-  title="Studio Photo Creation by D"
-  description="Photography and video studio in Paphos, Cyprus."
->
+<BaseLayout {...pageMetadata["/"]}>
   <section class="page-placeholder">
     <h1 class="page-placeholder__title">Studio Photo Creation by D</h1>
     <p class="page-placeholder__text">

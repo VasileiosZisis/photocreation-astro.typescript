@@ -1,0 +1,48 @@
+{
+  "title": "Cypriot Weddings",
+  "slug": "cypriot-weddings",
+  "route": "/cypriot-weddings/",
+  "seo": {
+    "title": "Cypriot Wedding photos - Studio Photo Creation by D",
+    "description": "Cypriot wedding photos from wedding photographer Dimitris Domouchtsis",
+    "canonicalPath": "/cypriot-weddings/",
+    "image": "https://res.cloudinary.com/dmdbza74n/image/upload/v1702129037/studiophotocreation/cy-we_2v/SPC_3192_ueixrp.webp"
+  },
+  "coverImage": {
+    "src": "https://res.cloudinary.com/dmdbza74n/image/upload/v1702129037/studiophotocreation/cy-we_2v/SPC_3192_ueixrp.webp",
+    "alt": "Photo from a Cypriot wedding in Paphos by Studio Photo Creation",
+    "title": "Cypriot Wedding"
+  },
+  "images": [
+    {
+      "src": "https://res.cloudinary.com/dmdbza74n/image/upload/v1702129037/studiophotocreation/cy-we_2v/SPC_3192_ueixrp.webp",
+      "alt": "Photo from a Cypriot wedding in Paphos by Studio Photo Creation",
+      "title": "Cypriot Wedding"
+    },
+    {
+      "src": "https://res.cloudinary.com/dmdbza74n/image/upload/v1702129036/studiophotocreation/cy-we_2v/SPC_3185_p1fuxc.webp",
+      "alt": "Photo from a Cypriot wedding in Paphos by Studio Photo Creation",
+      "title": "Cypriot Wedding"
+    },
+    {
+      "src": "https://res.cloudinary.com/dmdbza74n/image/upload/v1702129035/studiophotocreation/cy-we_2v/SPC_3153_gf6q2w.webp",
+      "alt": "Photo from a Cypriot wedding in Paphos by Studio Photo Creation",
+      "title": "Cypriot Wedding"
+    },
+    {
+      "src": "https://res.cloudinary.com/dmdbza74n/image/upload/v1702129035/studiophotocreation/cy-we_2v/SPC_3140_mfqqdy.webp",
+      "alt": "Photo from a Cypriot wedding in Paphos by Studio Photo Creation",
+      "title": "Cypriot Wedding"
+    },
+    {
+      "src": "https://res.cloudinary.com/dmdbza74n/image/upload/v1702129020/studiophotocreation/cy-we_2v/SPC_3134_v7lt08.webp",
+      "alt": "Photo from a Cypriot wedding in Paphos by Studio Photo Creation",
+      "title": "Cypriot Wedding"
+    },
+    {
+      "src": "https://res.cloudinary.com/dmdbza74n/image/upload/v1702129020/studiophotocreation/cy-we_2v/SPC_3128_qh9eaj.webp",
+      "alt": "Photo from a Cypriot wedding in Paphos by Studio Photo Creation",
+      "title": "Cypriot Wedding"
+    }
+  ]
+}

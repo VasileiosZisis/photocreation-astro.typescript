@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { pageMetadata } from "../data/pages";
+import { cloudinaryImage } from "../utils/cloudinary";
 import "../styles/contact-page.css";
 ---
 
@@ -10,7 +11,7 @@ import "../styles/contact-page.css";
       <div class="contact-page__image-wrap">
         <img
           class="contact-page__image"
-          src="https://res.cloudinary.com/dmdbza74n/image/upload/v1632243600/studiophotocreation/wedding-stories/jemma-carl/CARL_JEMMA_13_j0orvq.webp"
+          src={cloudinaryImage("https://res.cloudinary.com/dmdbza74n/image/upload/v1632243600/studiophotocreation/wedding-stories/jemma-carl/CARL_JEMMA_13_j0orvq.webp", 1000)}
           alt="Wedding couple photographed by Studio Photo Creation."
         />
       </div>
@@ -46,7 +47,7 @@ import "../styles/contact-page.css";
         </div>
         <img
           class="contact-page__studio-image"
-          src="https://res.cloudinary.com/dmdbza74n/image/upload/v1632245788/studiophotocreation/Location_1_ordr1u.webp"
+          src={cloudinaryImage("https://res.cloudinary.com/dmdbza74n/image/upload/v1632245788/studiophotocreation/Location_1_ordr1u.webp", 900)}
           alt="Front view of the Studio Photo Creation photography studio in Paphos."
         />
       </div>

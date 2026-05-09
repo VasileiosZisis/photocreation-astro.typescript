@@ -18,6 +18,28 @@ Question:
 
 Milestone:
 
+07 - SEO, Accessibility, And Performance
+
+Changed:
+
+Added Astro sitemap output, robots.txt, richer static social metadata, a hero
+video poster, Cloudinary thumbnail transforms for key media, visible focus
+styles, and route/output checks for launch readiness.
+
+Learned:
+
+Astro renders SEO metadata and sitemap URLs at build time, but launch quality
+still depends on auditing generated HTML, media URLs, focus behavior, and where
+page-specific JavaScript is actually referenced.
+
+Question:
+
+None.
+
+### 2026-05-09
+
+Milestone:
+
 06 - Remaining Pages Migration
 
 Changed:

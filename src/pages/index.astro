@@ -9,9 +9,11 @@ import {
   transitionImages,
 } from "../data/homepage";
 import { pageMetadata } from "../data/pages";
+import { cloudinaryImage } from "../utils/cloudinary";
 import "../styles/homepage.css";
 
 const organizationSchemaJson = JSON.stringify(organizationSchema);
+const heroPoster = cloudinaryImage(heroVideo.poster, 1440);
 ---
 
 <BaseLayout {...pageMetadata["/"]}>
@@ -20,7 +22,7 @@ const organizationSchemaJson = JSON.stringify(organizationSchema);
   <div class="homepage">
     <section class="homepage__video-section" aria-label="Studio Photo Creation wedding film preview">
       <div class="homepage__video-wrap">
-        <video class="homepage__video" autoplay muted loop playsinline>
+        <video class="homepage__video" autoplay muted loop playsinline poster={heroPoster}>
           <source src={heroVideo.src} type={heroVideo.type} />
           Sorry, your browser does not support embedded videos.
         </video>
@@ -36,7 +38,7 @@ const organizationSchemaJson = JSON.stringify(organizationSchema);
       </p>
       <img
         class="homepage__transition-image homepage__transition-image--left"
-        src={transitionImages.left.src}
+        src={cloudinaryImage(transitionImages.left.src, 520)}
         alt={transitionImages.left.alt}
         loading="lazy"
       />
@@ -53,7 +55,7 @@ const organizationSchemaJson = JSON.stringify(organizationSchema);
       </p>
       <img
         class="homepage__transition-image homepage__transition-image--middle"
-        src={transitionImages.middle.src}
+        src={cloudinaryImage(transitionImages.middle.src, 900)}
         alt={transitionImages.middle.alt}
         loading="lazy"
       />
@@ -64,7 +66,7 @@ const organizationSchemaJson = JSON.stringify(organizationSchema);
       </p>
       <img
         class="homepage__transition-image homepage__transition-image--right"
-        src={transitionImages.right.src}
+        src={cloudinaryImage(transitionImages.right.src, 520)}
         alt={transitionImages.right.alt}
         loading="lazy"
       />
@@ -78,7 +80,7 @@ const organizationSchemaJson = JSON.stringify(organizationSchema);
       <div class="homepage__contact-image-wrap">
         <img
           class="homepage__contact-image"
-          src={contactCtaImage.src}
+          src={cloudinaryImage(contactCtaImage.src, 900)}
           alt={contactCtaImage.alt}
           loading="eager"
         />

@@ -19,6 +19,7 @@
     "photoswipe": "^5.4.4"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^3.7.2",
     "@eslint/js": "^10.0.1",
     "eslint": "^10.3.0",
     "eslint-plugin-astro": "^1.7.0",

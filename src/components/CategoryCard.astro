@@ -2,11 +2,14 @@
 import "../styles/category-card.css";
 
 import type { HomepageCategory } from "../data/homepage";
+import { cloudinaryImage } from "../utils/cloudinary";
 
 type Props = HomepageCategory;
 
 const { title, href, image, alt, widthOffset, height, top, left } = Astro.props;
 const style = `--category-card-top: ${top}; --category-card-left: ${left}; --category-card-width: calc(100vw - ${widthOffset}%); --category-card-height: ${height};`;
+const image1x = cloudinaryImage(image, 720);
+const image2x = cloudinaryImage(image, 1440);
 ---
 
 <article class="category-card" style={style}>
@@ -14,7 +17,13 @@ const style = `--category-card-top: ${top}; --category-card-left: ${left}; --cat
   <a class="category-card__link" href={href} aria-label={`View ${title.toLowerCase()}`}>
     <span class="category-card__media">
       <span class="category-card__cta">VIEW ALL</span>
-      <img class="category-card__image" src={image} alt={alt} loading="lazy" />
+      <img
+        class="category-card__image"
+        src={image1x}
+        srcset={`${image1x} 1x, ${image2x} 2x`}
+        alt={alt}
+        loading="lazy"
+      />
     </span>
   </a>
 </article>

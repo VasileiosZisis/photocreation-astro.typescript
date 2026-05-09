@@ -2,6 +2,7 @@
 import "../styles/gallery-grid.css";
 
 import type { GalleryImage } from "../types/gallery";
+import { cloudinaryImage } from "../utils/cloudinary";
 
 type Props = {
   images: GalleryImage[];
@@ -13,8 +14,6 @@ const { images, galleryId } = Astro.props;
 const DEFAULT_WIDTH = 1600;
 const DEFAULT_HEIGHT = 1067;
 
-const cloudinaryImage = (src: string, width: number) =>
-  src.replace("/upload/", `/upload/c_limit,w_${width},f_auto,q_auto/`);
 ---
 
 <section class="gallery-grid" id={galleryId} data-photoswipe-gallery>

@@ -14,6 +14,8 @@ export type HomepageCategory = {
 export const heroVideo = {
   src: "https://res.cloudinary.com/dmdbza74n/video/upload/v1632241719/studiophotocreation/video_l2pj3j.mp4",
   type: "video/mp4",
+  poster:
+    "https://res.cloudinary.com/dmdbza74n/image/upload/v1632242635/studiophotocreation/cypriot-weddings/kata-andreas/SPC_1720_opgooy.webp",
 };
 
 export const transitionImages = {

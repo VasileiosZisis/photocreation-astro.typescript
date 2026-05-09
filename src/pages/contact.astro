@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { pageMetadata } from "../data/pages";
+import "../styles/contact-page.css";
+---
+
+<BaseLayout {...pageMetadata["/contact/"]}>
+  <div class="contact-page">
+    <section class="contact-page__intro" aria-label="Contact details">
+      <div class="contact-page__image-wrap">
+        <img
+          class="contact-page__image"
+          src="https://res.cloudinary.com/dmdbza74n/image/upload/v1632243600/studiophotocreation/wedding-stories/jemma-carl/CARL_JEMMA_13_j0orvq.webp"
+          alt="Wedding couple photographed by Studio Photo Creation."
+        />
+      </div>
+      <ul class="contact-page__links">
+        <li class="contact-page__link-item">
+          <span class="contact-page__icon" aria-hidden="true">f</span>
+          <a href="https://www.facebook.com/DomouchtsisDimitris" target="_blank" rel="noreferrer">
+            DomouchtsisDimitris
+          </a>
+        </li>
+        <li class="contact-page__link-item">
+          <span class="contact-page__icon" aria-hidden="true">ig</span>
+          <a href="https://www.instagram.com/studiophotocreation/" target="_blank" rel="noreferrer">
+            @studiophotocreation
+          </a>
+        </li>
+        <li class="contact-page__link-item">
+          <span class="contact-page__icon" aria-hidden="true">@</span>
+          <a href="mailto:photocreation@cytanet.com.cy">photocreation@cytanet.com.cy</a>
+        </li>
+        <li class="contact-page__link-item">
+          <span class="contact-page__icon" aria-hidden="true">tel</span>
+          <a href="tel:+35799541649" title="+357 99 54 1649">+357 99 54 1649</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contact-page__location" aria-label="Studio location">
+      <div class="contact-page__address">
+        <div class="contact-page__address-line">
+          <span class="contact-page__pin" aria-hidden="true">•</span>
+          <p>Apostolou Pavlou 14A Paphos CY 8046</p>
+        </div>
+        <img
+          class="contact-page__studio-image"
+          src="https://res.cloudinary.com/dmdbza74n/image/upload/v1632245788/studiophotocreation/Location_1_ordr1u.webp"
+          alt="Front view of the Studio Photo Creation photography studio in Paphos."
+        />
+      </div>
+      <div class="contact-page__map">
+        <iframe
+          title="Studio Photo Creation location on Google Maps"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.3281231813625!2d32.41835435340739!3d34.77290767312378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9e5ee3aa8a0c429c!2sWedding%20%26%20Portrait%20Photographer%20Dimitris%20Domouchtsis!5e0!3m2!1sen!2s!4v1597683639687!5m2!1sen"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

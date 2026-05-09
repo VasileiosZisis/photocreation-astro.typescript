@@ -91,3 +91,39 @@ ol {
   margin-top: 1rem;
   color: var(--color-grey);
 }
+
+.error-page {
+  display: grid;
+  min-height: 70vh;
+  place-content: center;
+  gap: 2rem;
+  overflow: hidden;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  text-align: center;
+}
+
+.error-page__title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.error-page__links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.error-page__link {
+  border: 1px solid var(--color-black);
+  padding: 0.5rem 1rem;
+  transition: all var(--transition-normal);
+}
+
+.error-page__link:hover,
+.error-page__link:focus {
+  border-color: var(--color-grey);
+  background-color: var(--color-grey);
+  color: var(--color-white);
+}

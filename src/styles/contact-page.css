@@ -1,0 +1,146 @@
+.contact-page {
+  margin-top: 5rem;
+  overflow: hidden;
+}
+
+.contact-page__intro {
+  display: flex;
+}
+
+.contact-page__image-wrap {
+  width: 100%;
+  max-height: 800px;
+  overflow: hidden;
+  background-color: var(--color-grey);
+}
+
+.contact-page__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-page__links {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--color-grey);
+}
+
+.contact-page__link-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-left: 10%;
+}
+
+.contact-page__link-item:not(:last-child)::after {
+  position: absolute;
+  width: 40%;
+  height: 1px;
+  margin-top: 4rem;
+  margin-left: 5%;
+  background-color: var(--color-white);
+  content: "";
+}
+
+.contact-page__link-item a {
+  color: var(--color-white);
+  font-size: 1.3rem;
+  transition: color var(--transition-normal);
+}
+
+.contact-page__link-item a:hover,
+.contact-page__link-item a:focus {
+  color: var(--color-black);
+}
+
+.contact-page__icon {
+  display: inline-grid;
+  min-width: 2rem;
+  height: 2rem;
+  place-content: center;
+  color: var(--color-black);
+  font-weight: 700;
+}
+
+.contact-page__location {
+  display: grid;
+  min-height: 75vh;
+  grid-template-columns: 1fr 1fr;
+  padding-block: 3rem;
+  background-color: var(--color-black);
+}
+
+.contact-page__address {
+  width: 90%;
+  margin: auto;
+}
+
+.contact-page__address-line {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 5rem;
+  color: var(--color-white);
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.contact-page__pin {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.contact-page__studio-image {
+  width: 100%;
+  border-radius: 1%;
+}
+
+.contact-page__map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 28rem;
+  border: 0;
+  border-radius: 1%;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .contact-page {
+    margin-top: 1rem;
+  }
+
+  .contact-page__intro {
+    flex-direction: column;
+  }
+
+  .contact-page__links {
+    padding-block: 3rem;
+  }
+
+  .contact-page__link-item {
+    justify-content: center;
+    padding-left: 1%;
+  }
+
+  .contact-page__link-item a {
+    font-size: 1rem;
+  }
+
+  .contact-page__link-item:not(:last-child)::after {
+    width: 40%;
+    margin-left: 30%;
+  }
+
+  .contact-page__location {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page__address-line {
+    font-size: 1rem;
+  }
+}

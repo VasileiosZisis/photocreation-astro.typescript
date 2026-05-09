@@ -18,6 +18,28 @@ Question:
 
 Milestone:
 
+06 - Remaining Pages Migration
+
+Changed:
+
+Migrated the remaining gallery data, contact page, privacy policy, and 404 page
+using the shared Astro layout and the gallery route pattern proven in the
+vertical slice.
+
+Learned:
+
+After the first Astro gallery and homepage patterns are proven, the remaining
+migration is mostly repetition: move content into validated data, keep static
+pages simple, and verify every route after each batch.
+
+Question:
+
+None.
+
+### 2026-05-09
+
+Milestone:
+
 05 - Gallery Vertical Slice
 
 Changed:

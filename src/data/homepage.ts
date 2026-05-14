@@ -109,10 +109,12 @@ export const contactCtaImage = {
 
 export const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "LocalBusiness",
   name: "Studio Photo Creation by D",
   url: "https://www.studiophotocreationbyd.com",
   logo: "https://res.cloudinary.com/dmdbza74n/image/upload/v1632242164/studiophotocreation/logo_white_mkjefy.png",
+  image:
+    "https://res.cloudinary.com/dmdbza74n/image/upload/v1632242635/studiophotocreation/cypriot-weddings/kata-andreas/SPC_1720_opgooy.webp",
   foundingDate: "2005",
   founder: {
     "@type": "Person",
@@ -121,10 +123,18 @@ export const organizationSchema = {
   address: {
     "@type": "PostalAddress",
     streetAddress: "Apostolou Pavlou 14A",
+    addressLocality: "Paphos",
     addressRegion: "Paphos",
     postalCode: "8046",
     addressCountry: "CY",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 34.77290767312378,
+    longitude: 32.41835435340739,
+  },
+  telephone: "+35799541649",
+  email: "photocreation@cytanet.com.cy",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",

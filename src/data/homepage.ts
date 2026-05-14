@@ -1,4 +1,5 @@
 import type { SiteRoute } from "../types/seo";
+import { siteUrl } from "./pages";
 
 export type HomepageCategory = {
   title: string;
@@ -111,7 +112,7 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Studio Photo Creation by D",
-  url: "https://www.studiophotocreationbyd.com",
+  url: siteUrl,
   logo: "https://res.cloudinary.com/dmdbza74n/image/upload/v1632242164/studiophotocreation/logo_white_mkjefy.png",
   image:
     "https://res.cloudinary.com/dmdbza74n/image/upload/v1632242635/studiophotocreation/cypriot-weddings/kata-andreas/SPC_1720_opgooy.webp",

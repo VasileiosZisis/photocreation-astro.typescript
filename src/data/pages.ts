@@ -1,6 +1,14 @@
 import type { SeoMeta, SiteRoute } from "../types/seo";
 
-export const siteUrl = "https://www.studiophotocreationbyd.com";
+export const siteUrl =
+  process.env.SITE_URL ??
+  process.env.DEPLOY_PRIME_URL ??
+  process.env.URL ??
+  "https://www.studiophotocreationbyd.com";
+
+export const isNetlifyPreviewUrl = new URL(siteUrl).hostname.endsWith(
+  ".netlify.app",
+);
 
 export const defaultOpenGraphImage =
   "https://res.cloudinary.com/dmdbza74n/image/upload/v1632242635/studiophotocreation/cypriot-weddings/kata-andreas/SPC_1720_opgooy.webp";

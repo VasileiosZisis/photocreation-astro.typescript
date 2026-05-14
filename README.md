@@ -95,6 +95,24 @@ npm run check
 
 `npm run check` runs linting, TypeScript, and the production build.
 
+## Netlify deployment
+
+The project is prepared for static Netlify deployment with the settings in
+`netlify.toml`:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Node version: `22.12.0`
+
+For client review, the site can be deployed on the default Netlify URL without
+connecting `www.studiophotocreationbyd.com`. During Netlify deploy previews,
+Astro uses Netlify's preview URL for canonical and sitemap generation, and the
+preview build is marked `noindex`.
+
+When the redesign is approved and the production domain is ready to move, set
+`SITE_URL=https://www.studiophotocreationbyd.com` in Netlify before the final
+production build.
+
 ## Technical direction
 
 The site is intentionally static-first. Astro renders the pages and gallery

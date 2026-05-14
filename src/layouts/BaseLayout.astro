@@ -1,7 +1,11 @@
 ---
 import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
-import { defaultOpenGraphImage, getCanonicalUrl } from "../data/pages";
+import {
+  defaultOpenGraphImage,
+  getCanonicalUrl,
+  isNetlifyPreviewUrl,
+} from "../data/pages";
 import "../styles/global.css";
 
 import type { SeoMeta } from "../types/seo";
@@ -26,6 +30,7 @@ const canonicalUrl = getCanonicalUrl(canonicalPath);
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    {isNetlifyPreviewUrl && <meta name="robots" content="noindex, nofollow" />}
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={title} />

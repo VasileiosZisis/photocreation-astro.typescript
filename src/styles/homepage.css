@@ -13,7 +13,7 @@
   color: var(--color-paper);
 }
 
-.homepage__hero-video {
+.homepage__hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -25,9 +25,17 @@
 .homepage__hero-overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(24, 22, 20, 0.92) 0%, rgba(24, 22, 20, 0.64) 44%, rgba(24, 22, 20, 0.3) 100%),
-    repeating-linear-gradient(90deg, rgba(245, 240, 232, 0.05) 0 1px, transparent 1px 12px);
+  background: linear-gradient(
+      90deg,
+      rgba(24, 22, 20, 0.92) 0%,
+      rgba(24, 22, 20, 0.64) 44%,
+      rgba(24, 22, 20, 0.3) 100%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(245, 240, 232, 0.05) 0 1px,
+      transparent 1px 12px
+    );
 }
 
 .homepage__hero-content {
@@ -76,10 +84,8 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition:
-    background-color var(--transition-normal),
-    border-color var(--transition-normal),
-    color var(--transition-normal),
+  transition: background-color var(--transition-normal),
+    border-color var(--transition-normal), color var(--transition-normal),
     transform var(--transition-normal);
 }
 
@@ -93,6 +99,47 @@
   transform: translateY(-2px);
 }
 
+.homepage__film {
+  position: relative;
+  padding: 7rem max(1.5rem, calc((100vw - 82rem) / 2));
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(24, 22, 20, 0.98),
+    rgba(36, 31, 27, 0.94)
+  );
+  color: var(--color-paper);
+}
+
+.homepage__film-copy {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 52rem);
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.homepage__film-media {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.35);
+}
+
+.homepage__film-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0;
+  background-color: var(--color-ink);
+  object-fit: cover;
+}
+
+.homepage__film-copy .homepage__transition-body {
+  color: rgba(245, 240, 232, 0.82);
+  margin-inline: auto;
+}
+
 .homepage__transition {
   position: relative;
   display: grid;
@@ -101,9 +148,16 @@
   gap: 3rem;
   overflow: hidden;
   padding: 7rem max(1.5rem, calc((100vw - 76rem) / 2));
-  background:
-    linear-gradient(135deg, rgba(245, 240, 232, 0.96), rgba(230, 220, 205, 0.84)),
-    repeating-linear-gradient(45deg, rgba(24, 22, 20, 0.045) 0 1px, transparent 1px 10px);
+  background: linear-gradient(
+      135deg,
+      rgba(245, 240, 232, 0.96),
+      rgba(230, 220, 205, 0.84)
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(24, 22, 20, 0.045) 0 1px,
+      transparent 1px 10px
+    );
 }
 
 .homepage__transition-copy {
@@ -132,6 +186,22 @@
   font-size: 1.15rem;
 }
 
+.homepage__transition-copy-image {
+  display: block;
+  width: min(100%, 25rem);
+  margin-top: 2.25rem;
+  margin-left: auto;
+  box-shadow: var(--shadow-soft);
+  object-fit: cover;
+}
+
+.homepage__transition-gallery {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-self: start;
+}
+
 .homepage__transition-image {
   position: relative;
   z-index: 1;
@@ -141,14 +211,12 @@
 }
 
 .homepage__transition-image--portrait {
-  grid-column: 2;
   width: 62%;
   height: 25rem;
   margin-left: auto;
 }
 
 .homepage__transition-image--landscape {
-  grid-column: 2;
   width: 68%;
   height: 31rem;
   margin-top: -7rem;
@@ -156,7 +224,6 @@
 }
 
 .homepage__transition-image--detail {
-  grid-column: 2;
   width: 46%;
   height: 22rem;
   margin-top: -8rem;
@@ -164,9 +231,8 @@
 
 .homepage__categories {
   padding: 7rem max(1.5rem, calc((100vw - 76rem) / 2));
-  background:
-    linear-gradient(rgba(24, 22, 20, 0.86), rgba(24, 22, 20, 0.9)),
-    url("https://res.cloudinary.com/dmdbza74n/image/upload/c_limit,w_1800,f_auto,q_auto/v1699800918/studiophotocreation/SPC_0895_background_rtk3p9.jpg");
+  background: linear-gradient(rgba(24, 22, 20, 0.86), rgba(24, 22, 20, 0.9)),
+    url('https://res.cloudinary.com/dmdbza74n/image/upload/c_limit,w_1800,f_auto,q_auto/v1699800918/studiophotocreation/SPC_0895_background_rtk3p9.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -197,9 +263,16 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
   gap: 0;
-  background:
-    linear-gradient(100deg, rgba(230, 220, 205, 0.92), rgba(245, 240, 232, 0.96)),
-    repeating-linear-gradient(0deg, rgba(24, 22, 20, 0.04) 0 1px, transparent 1px 9px);
+  background: linear-gradient(
+      100deg,
+      rgba(230, 220, 205, 0.92),
+      rgba(245, 240, 232, 0.96)
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(24, 22, 20, 0.04) 0 1px,
+      transparent 1px 9px
+    );
 }
 
 .homepage__contact-media {
@@ -281,10 +354,23 @@
     padding-block: 4rem;
   }
 
+  .homepage__film {
+    padding-block: 4rem;
+  }
+
   .homepage__transition-copy {
     position: relative;
     top: auto;
     padding-top: 0;
+  }
+
+  .homepage__transition-copy-image {
+    width: 100%;
+    max-height: 24rem;
+  }
+
+  .homepage__transition-gallery {
+    display: contents;
   }
 
   .homepage__transition-image--portrait,

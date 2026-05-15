@@ -14,6 +14,7 @@ import "../styles/homepage.css";
 
 const organizationSchemaJson = JSON.stringify(organizationSchema);
 const heroPoster = cloudinaryImage(heroVideo.poster, 1440);
+const filmPoster = cloudinaryImage(heroVideo.sectionPoster, 1440);
 ---
 
 <BaseLayout {...pageMetadata["/"]}>
@@ -21,10 +22,13 @@ const heroPoster = cloudinaryImage(heroVideo.poster, 1440);
 
   <div class="homepage">
     <section class="homepage__hero" aria-label="Studio Photo Creation by D">
-      <video class="homepage__hero-video" autoplay muted loop playsinline poster={heroPoster}>
-        <source src={heroVideo.src} type={heroVideo.type} />
-          Sorry, your browser does not support embedded videos
-      </video>
+      <img
+        class="homepage__hero-image"
+        src={heroPoster}
+        alt=""
+        aria-hidden="true"
+        fetchpriority="high"
+      />
       <div class="homepage__hero-overlay"></div>
       <div class="homepage__hero-content">
         <p class="homepage__eyebrow">Wedding photography and film in Paphos, Cyprus</p>
@@ -34,6 +38,23 @@ const heroPoster = cloudinaryImage(heroVideo.poster, 1440);
           families, and portraits
         </p>
         <a class="homepage__hero-link" href="/contact/">Book a conversation</a>
+      </div>
+    </section>
+
+    <section class="homepage__film" aria-label="Studio Photo Creation film">
+      <div class="homepage__film-copy" data-motion="text-left">
+        <p class="homepage__eyebrow">Cinematic keepsakes</p>
+        <h2 class="homepage__transition-title">Motion for the memories that move</h2>
+        <p class="homepage__transition-body">
+          Sound, glances, laughter, and the in-between gestures are preserved
+          with the same attention as every still frame
+        </p>
+      </div>
+      <div class="homepage__film-media" data-motion="image">
+        <video class="homepage__film-video" autoplay muted loop playsinline poster={filmPoster}>
+          <source src={heroVideo.src} type={heroVideo.type} />
+          Sorry, your browser does not support embedded videos
+        </video>
       </div>
     </section>
 
@@ -47,31 +68,41 @@ const heroPoster = cloudinaryImage(heroVideo.poster, 1440);
           From ceremony details to late-night celebration, every gallery is built
           around atmosphere, emotion, and the people in the room
         </p>
+        <img
+          class="homepage__transition-copy-image"
+          src={cloudinaryImage("https://res.cloudinary.com/dmdbza74n/image/upload/v1702128906/studiophotocreation/cy-we_2v/SPC_2813_czc2qq.webp", 620)}
+          alt="Wedding celebration detail photographed by Studio Photo Creation"
+          loading="lazy"
+          data-motion="image"
+          style="--motion-delay: 180ms"
+        />
       </div>
-      <img
-        class="homepage__transition-image homepage__transition-image--portrait"
-        src={cloudinaryImage(transitionImages.left.src, 520)}
-        alt={transitionImages.left.alt}
-        loading="lazy"
-        data-motion="image"
-        style="--motion-delay: 110ms"
-      />
-      <img
-        class="homepage__transition-image homepage__transition-image--landscape"
-        src={cloudinaryImage(transitionImages.middle.src, 900)}
-        alt={transitionImages.middle.alt}
-        loading="lazy"
-        data-motion="image"
-        style="--motion-delay: 230ms"
-      />
-      <img
-        class="homepage__transition-image homepage__transition-image--detail"
-        src={cloudinaryImage(transitionImages.right.src, 520)}
-        alt={transitionImages.right.alt}
-        loading="lazy"
-        data-motion="image"
-        style="--motion-delay: 340ms"
-      />
+      <div class="homepage__transition-gallery">
+        <img
+          class="homepage__transition-image homepage__transition-image--portrait"
+          src={cloudinaryImage(transitionImages.left.src, 520)}
+          alt={transitionImages.left.alt}
+          loading="lazy"
+          data-motion="image"
+          style="--motion-delay: 110ms"
+        />
+        <img
+          class="homepage__transition-image homepage__transition-image--landscape"
+          src={cloudinaryImage(transitionImages.middle.src, 900)}
+          alt={transitionImages.middle.alt}
+          loading="lazy"
+          data-motion="image"
+          style="--motion-delay: 230ms"
+        />
+        <img
+          class="homepage__transition-image homepage__transition-image--detail"
+          src={cloudinaryImage(transitionImages.right.src, 520)}
+          alt={transitionImages.right.alt}
+          loading="lazy"
+          data-motion="image"
+          style="--motion-delay: 340ms"
+        />
+      </div>
     </section>
 
     <section class="homepage__categories" aria-labelledby="homepage-categories-title">

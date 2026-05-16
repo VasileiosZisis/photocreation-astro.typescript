@@ -20,6 +20,16 @@ const {
 } = Astro.props;
 
 const canonicalUrl = getCanonicalUrl(canonicalPath);
+const shouldLoadAnalytics = !isNetlifyPreviewUrl;
+const googleAnalyticsScript = `window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag("js", new Date());
+gtag("config", "G-8M0TMBX28Z");`;
+const googleTagManagerScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-MKQR9QL");`;
 ---
 
 <!doctype html>
@@ -43,9 +53,30 @@ const canonicalUrl = getCanonicalUrl(canonicalPath);
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
+    {
+      shouldLoadAnalytics && (
+        <>
+          <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-8M0TMBX28Z" />
+          <script is:inline set:html={googleAnalyticsScript} />
+          <script is:inline set:html={googleTagManagerScript} />
+        </>
+      )
+    }
     <title>{title}</title>
   </head>
   <body>
+    {
+      shouldLoadAnalytics && (
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MKQR9QL"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          />
+        </noscript>
+      )
+    }
     <SiteHeader />
     <main class="site-main">
       <slot />

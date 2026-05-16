@@ -24,6 +24,7 @@ about, and better suited to a mostly static photography website.
 - Plain CSS architecture using BEM naming
 - SEO metadata, canonical URLs, sitemap, and robots.txt
 - Responsive premium redesign with restrained scroll reveal animations
+- Google Analytics and Google Tag Manager carried over from the original site
 - Netlify-ready static output
 
 ## Current stack
@@ -35,6 +36,7 @@ about, and better suited to a mostly static photography website.
 - Cloudinary
 - PhotoSwipe
 - `@astrojs/sitemap`
+- Google Analytics / Google Tag Manager
 - ESLint
 - Netlify static deployment target
 
@@ -103,15 +105,18 @@ The project is prepared for static Netlify deployment with the settings in
 - Build command: `npm run build`
 - Publish directory: `dist`
 - Node version: `22.12.0`
+- Production `SITE_URL`: `https://www.studiophotocreationbyd.com`
 
 For client review, the site can be deployed on the default Netlify URL without
 connecting `www.studiophotocreationbyd.com`. During Netlify deploy previews,
 Astro uses Netlify's preview URL for canonical and sitemap generation, and the
 preview build is marked `noindex`.
 
-When the redesign is approved and the production domain is ready to move, set
-`SITE_URL=https://www.studiophotocreationbyd.com` in Netlify before the final
-production build.
+For production deploys, `netlify.toml` sets
+`SITE_URL=https://www.studiophotocreationbyd.com`, so canonical URLs, sitemap
+URLs, robots.txt, and local business schema resolve to the canonical `www`
+domain. Google Analytics and Google Tag Manager load only outside Netlify
+preview URLs so review deploys do not pollute production analytics.
 
 ## Technical direction
 
